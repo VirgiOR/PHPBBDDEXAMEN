@@ -1,4 +1,5 @@
--- Active: 1750671264799@@127.0.0.1@3306@seneca
+-- Active: 1750671267468@@127.0.0.1@3306@seneca
+ 
 
 create database seneca
 character set latin1
@@ -33,6 +34,7 @@ create table asignaturas (
 
 
 drop table if exists vehiculos;
+
 create table vehiculos (
     matricula char(8) primary key,
     marca varchar(20) NOT NULL,
