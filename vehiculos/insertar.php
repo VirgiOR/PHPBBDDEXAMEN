@@ -2,7 +2,7 @@
 
 if (!isset($_POST['matricula'])) {
     // Mueve el navegador hasta otra página si no se llegadesde el formulario
-    header('Location:registro.php');
+    header('Location:listado.php');
 }
 require_once('../plantillas/cabecera.php');
 

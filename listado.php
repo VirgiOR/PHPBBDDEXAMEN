@@ -7,6 +7,7 @@
         <thead class="table-dark">
             <tr>
                 <th>ID</th>
+                <th>dni</th>
                 <th>Nombre</th>
                 <th>Apellido1</th>
                 <th>Apellido2</th>
@@ -24,7 +25,7 @@
 
 
 
-                $consulta="SELECT * FROM alumnos WHERE CONCAT(nombre, ' ', apellido1, ' ', apellido2) like '%".$nomApe."%'";
+                $consulta="SELECT * FROM alumnos WHERE CONCAT(dni,' ',nombre, ' ', apellido1, ' ', apellido2) like '%".$nomApe."%'";
             } else {
                 $consulta ="SELECT * FROM alumnos";
             }
@@ -38,6 +39,7 @@
             while(($fila = mysqli_fetch_array($filas))==true){
                 echo "<tr>\n";
                 echo "<td> ".$fila['id']." </td>\n";
+                echo "<td> ".$fila['dni']." </td>\n";
                 echo "<td> ".$fila['nombre']." </td>\n";
                 echo "<td> ".$fila['apellido1']." </td>\n";
                 echo "<td> ".$fila['apellido2']." </td>\n";
